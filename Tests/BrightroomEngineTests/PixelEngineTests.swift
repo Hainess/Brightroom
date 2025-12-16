@@ -25,22 +25,30 @@ class PixelEngineTests: XCTestCase {
   }
      
   func testScalingCGSize() {
-    
+
     do {
       let size = CGSize(width: 5561, height: 3127)
-      
+
       let scaled = size.scaled(maxPixelSize: 300)
-      
+
       XCTAssertEqual(scaled, CGSize(width: 300, height: 169))
     }
-    
+
     do {
       let size = CGSize(width: 3127, height: 5561)
-      
+
       let scaled = size.scaled(maxPixelSize: 300)
-      
+
       XCTAssertEqual(scaled, CGSize(width: 169, height: 300))
     }
-    
+
+    do {
+      let size = CGSize(width: 200, height: 100)
+
+      let scaled = size.scaled(maxPixelSize: 400)
+
+      XCTAssertEqual(scaled, size)
+    }
+
   }
 }
