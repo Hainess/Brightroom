@@ -182,7 +182,7 @@ public enum ImageTool {
       [
         kCGImageSourceThumbnailMaxPixelSize: maxPixelSize,
         kCGImageSourceCreateThumbnailFromImageAlways: true,
-        kCGImageSourceCreateThumbnailWithTransform: false,
+        kCGImageSourceCreateThumbnailWithTransform: fixesOrientation,
       ] as CFDictionary
     )
     .flatMap { image in

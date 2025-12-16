@@ -76,7 +76,7 @@ let imageProvider = ImageProvider(image: uiImage) // URL, Data are also supporte
 let controller = PhotosCropViewController(imageProvider: imageProvider)
 
 // Set up handlers when editing finishes
-controller.handers
+controller.handlers
 ```
 
 ## SwiftUI Support (BETA)
